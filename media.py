@@ -8,6 +8,8 @@ def verificar_aprovacao(media):
     # Verificando se o aluno foi aprovado ou reprovado
     if media >= 6.0:
         return "Aprovado"
+    elif media > 5.0:
+        return "Recuperação"
     else:
         return "Reprovado"
 
@@ -19,10 +21,11 @@ nota3 = float(input("Digite a terceira nota: "))
 # Calculando a média
 media = calcular_media(nota1, nota2, nota3)
 
-# Verificando a aprovação
+# Verificando o status do aluno
 status = verificar_aprovacao(media)
 
 # Exibindo o resultado
 print(f"A média das notas é: {media:.2f}")
 print(f"O aluno está: {status}")
+
 
